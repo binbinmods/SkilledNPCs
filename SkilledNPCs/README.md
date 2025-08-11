@@ -1,8 +1,8 @@
-# Multitudinous Mythics
+# Skilled NPCs
 
-A very simple mod forces end of act bosses to drop mythic cards.
+A very simple mod that makes all enemies play an additional card per turn. Thats it. This is intended to make the game harder. If you don't want the game to be harder, this isn't the mod for you.
 
-This mod may not work in multiplayer, it is untested.
+This mod may not work in multiplayer, it is untested. However, it should work
 
 **Please let me know if you have any issues**
 

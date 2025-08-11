@@ -24,12 +24,18 @@ namespace SkilledNPCs
 
 
         [HarmonyPostfix]
-        [HarmonyPatch(typeof(Globals), nameof(Functions.GetCardByRarity))]
-        public static void CreateGameContentPostfix(ref string __result, int rarity, CardData _cardData, bool isChallenge = false)
+        [HarmonyPatch(typeof(NPC), nameof(NPC.CreateOverDeck))]
+        public static void CreateOverDeck(ref NPC __instance)
         {
             // Add one to the number of cards played by each enemy
+            if (__instance == null)
+            {
+                return;
+            }
 
+            LogDebug($"CreateOverDeck - {__instance?.NpcData?.Id} - {__instance?.NpcData?.CardsInHand}");
 
+            __instance.NpcData.CardsInHand++;
         }
 
 
