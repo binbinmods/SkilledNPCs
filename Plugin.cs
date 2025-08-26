@@ -41,6 +41,7 @@ namespace SkilledNPCs
         // It automatically creates the appropriate configs.
         public static ConfigEntry<bool> EnableMod { get; set; }
         public static ConfigEntry<bool> EnableDebugging { get; set; }
+        public static ConfigEntry<int> NumberOfExtraCards { get; set; }
 
         public static bool EssentialsInstalled = false;
         public static string debugBase = $"{PluginInfo.PLUGIN_GUID} ";
@@ -55,7 +56,8 @@ namespace SkilledNPCs
             Log.LogInfo($"{PluginInfo.PLUGIN_GUID} {PluginInfo.PLUGIN_VERSION} has loaded!");
 
             EnableMod = Config.Bind(new ConfigDefinition(PluginInfo.PLUGIN_NAME, "EnableMod"), true, new ConfigDescription("Enables the mod. If false, the mod will not work then next time you load the game."));
-            EnableDebugging = Config.Bind(new ConfigDefinition(PluginInfo.PLUGIN_NAME, "EnableDebugging"), true, new ConfigDescription("Enables the debugging"));
+            EnableDebugging = Config.Bind(new ConfigDefinition(PluginInfo.PLUGIN_NAME, "EnableDebugging"), false, new ConfigDescription("Enables the debugging"));
+            NumberOfExtraCards = Config.Bind(new ConfigDefinition(PluginInfo.PLUGIN_NAME, "NumberOfExtraCards"), 1, new ConfigDescription("How many extra cards each NPC will play. Default is 1. Can be used to decrease enemy cards as well."));
 
             EssentialsInstalled = Chainloader.PluginInfos.ContainsKey("com.stiffmeds.obeliskialessentials");
 

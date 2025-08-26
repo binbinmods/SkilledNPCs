@@ -23,7 +23,7 @@ namespace SkilledNPCs
 
 
 
-        [HarmonyPostfix]
+        [HarmonyPrefix]
         [HarmonyPatch(typeof(NPC), nameof(NPC.CreateOverDeck))]
         public static void CreateOverDeck(ref NPC __instance)
         {

@@ -1,6 +1,6 @@
 # Skilled NPCs
 
-A very simple mod that makes all enemies play an additional card per turn. Thats it. This is intended to make the game harder. If you don't want the game to be harder, this isn't the mod for you.
+A very simple mod that makes all enemies play additional cards every turn. Thats it. This is intended to make the game harder. If you don't want the game to be harder, this isn't the mod for you.
 
 This mod may not work in multiplayer, it is untested. However, it should work
 
