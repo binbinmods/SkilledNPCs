@@ -35,7 +35,15 @@ namespace SkilledNPCs
 
             LogDebug($"CreateOverDeck - {__instance?.NpcData?.Id} - {__instance?.NpcData?.CardsInHand}");
 
-            __instance.NpcData.CardsInHand++;
+
+            if (PlayMaxCards.Value)
+            {
+                __instance.NpcData.CardsInHand += 1000;
+            }
+            else
+            {
+                __instance.NpcData.CardsInHand += NumberOfExtraCards.Value;
+            }
         }
 
 

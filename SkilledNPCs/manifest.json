@@ -1,6 +1,6 @@
 {
   "name": "Skilled_NPCs",
-  "version_number": "1.0.0",
+  "version_number": "1.0.1",
   "website_url": "https://github.com/binbinmods/SkilledNPCs",
   "description": "Monsters now play an additional card every turn. Makes the game somewhat harder.",
   "dependencies": ["BepInEx-BepInExPack_AcrossTheObelisk-5.4.23"]
